@@ -37,6 +37,7 @@ func (c *Conn) Read() ([]byte, error) {
 
 // Write writes a websocket message.
 func (c *Conn) Write(buf []byte) error {
+	fmt.Println(string(buf))
 	return c.WriteMessage(websocket.TextMessage, buf)
 }
 
